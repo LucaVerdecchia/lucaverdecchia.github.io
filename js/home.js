@@ -1,7 +1,7 @@
-import { initAuth, onAuthChange } from "./auth.js";
+import { ensureAuthReady, onAuthChange } from "./auth.js";
 import { mountAuthBar, renderAuthBar } from "./auth-ui.js";
 
-await initAuth();
+await ensureAuthReady();
 
 async function loadDayStats(dayData) {
   if (!dayData) return null;

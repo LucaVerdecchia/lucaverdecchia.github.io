@@ -51,6 +51,13 @@
   cursor: not-allowed;
 }
 
+.auth-error {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #ff6b6b;
+}
+
 .workout-log-section {
   margin-bottom: 14px;
 }

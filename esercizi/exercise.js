@@ -1,11 +1,11 @@
 import { renderImage } from "../js/shared.js";
-import { initAuth, onAuthChange } from "../js/auth.js";
+import { ensureAuthReady, onAuthChange } from "../js/auth.js";
 import { mountAuthBar, renderAuthBar } from "../js/auth-ui.js";
 import { setupWorkoutLog } from "../js/workout-log-ui.js";
 
 const ROOT = "..";
 
-await initAuth();
+await ensureAuthReady();
 
 async function loadData() {
   const [exercises, giorno1] = await Promise.all([
