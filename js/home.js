@@ -1,5 +1,6 @@
 import { ensureAuthReady, onAuthChange } from "./auth.js";
 import { mountAuthBar, renderAuthBar } from "./auth-ui.js";
+import { mountAuthStatus } from "./auth-debug.js";
 
 await ensureAuthReady();
 
@@ -60,8 +61,14 @@ export async function renderHome() {
 
   app.innerHTML = `
     <div id="auth-bar"></div>
+    <section class="auth-status-box">
+      <p class="section-label">Stato accesso (debug)</p>
+      <div id="auth-status-log" class="auth-status-log"></div>
+    </section>
     ${renderHomeContent(programs)}
   `;
+
+  mountAuthStatus();
 
   const authBar = document.getElementById("auth-bar");
   mountAuthBar(authBar);

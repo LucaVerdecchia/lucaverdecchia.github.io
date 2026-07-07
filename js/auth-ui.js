@@ -1,15 +1,8 @@
-import { signInWithGoogle, logOut, consumeAuthError } from "./auth.js";
+import { signInWithGoogle, logOut } from "./auth.js";
+import { logAuth } from "./auth-debug.js";
 
 export function mountAuthBar(container) {
   if (!container) return;
-
-  const authError = consumeAuthError();
-  if (authError) {
-    const notice = document.createElement("p");
-    notice.className = "auth-error";
-    notice.textContent = authError;
-    container.appendChild(notice);
-  }
 
   container.addEventListener("click", async (e) => {
     const signInBtn = e.target.closest("[data-auth-signin]");
@@ -21,8 +14,9 @@ export function mountAuthBar(container) {
       try {
         await signInWithGoogle();
       } catch (error) {
-        console.error(error);
-        alert(`Accesso non riuscito: ${error.message || "riprova"}`);
+        logAuth("Accesso annullato o fallito", {
+          messaggio: error.message || "riprova",
+        });
         signInBtn.disabled = false;
         signInBtn.textContent = "Accedi con Google";
       }
