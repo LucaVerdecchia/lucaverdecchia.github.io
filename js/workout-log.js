@@ -1,6 +1,7 @@
 import { auth, db } from "./firebase.js";
 import {
   collection,
+  deleteDoc,
   doc,
   getDoc,
   getDocs,
@@ -40,6 +41,34 @@ export async function addSet(slug, weight, reps) {
     },
     { merge: true }
   );
+}
+
+export async function updateSet(slug, date, index, weight, reps) {
+  const ref = sessionRef(slug, date);
+  const snap = await getDoc(ref);
+  if (!snap.exists()) throw new Error("Sessione non trovata.");
+
+  const sets = [...snap.data().sets];
+  if (index < 0 || index >= sets.length) throw new Error("Serie non trovata.");
+  sets[index] = { weight: Number(weight), reps: Number(reps) };
+
+  await setDoc(ref, { sets, updatedAt: serverTimestamp() }, { merge: true });
+}
+
+export async function deleteSet(slug, date, index) {
+  const ref = sessionRef(slug, date);
+  const snap = await getDoc(ref);
+  if (!snap.exists()) throw new Error("Sessione non trovata.");
+
+  const sets = [...snap.data().sets];
+  if (index < 0 || index >= sets.length) throw new Error("Serie non trovata.");
+  sets.splice(index, 1);
+
+  if (sets.length === 0) {
+    await deleteDoc(ref);
+  } else {
+    await setDoc(ref, { sets, updatedAt: serverTimestamp() }, { merge: true });
+  }
 }
 
 export async function getHistory(slug) {

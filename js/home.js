@@ -1,6 +1,8 @@
 import { ensureAuthReady, onAuthChange } from "./auth.js";
 import { mountAuthBar, renderAuthBar } from "./auth-ui.js";
+import { mountRestTimer } from "./rest-timer-ui.js";
 
+mountRestTimer();
 await ensureAuthReady();
 
 async function loadDayStats(dayData) {
@@ -36,6 +38,19 @@ function renderHomeContent(programs) {
 
     <p class="section-label">Tipologie di allenamento</p>
     <ul class="nav-list">${programItems}</ul>
+
+    <p class="section-label spaced">Account</p>
+    <ul class="nav-list">
+      <li>
+        <a href="impostazioni.html" class="nav-link settings">
+          <span>
+            Impostazioni
+            <span class="meta">Data · peso corporeo</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </li>
+    </ul>
 
     <p class="section-label spaced">Database</p>
     <ul class="nav-list">

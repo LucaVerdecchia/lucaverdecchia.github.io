@@ -1,5 +1,7 @@
 @import url("../css/theme.css");
 @import url("../css/auth.css");
+@import url("../css/rest-timer.css");
+@import url("../css/toast.css");
 
 .hero-image {
   border-radius: 18px;

@@ -2,17 +2,27 @@ import { renderImage } from "../js/shared.js";
 import { ensureAuthReady, onAuthChange } from "../js/auth.js";
 import { mountAuthBar, renderAuthBar } from "../js/auth-ui.js";
 import { setupWorkoutLog } from "../js/workout-log-ui.js";
+import { mountRestTimer } from "../js/rest-timer-ui.js";
 
 const ROOT = "..";
 
+const DAY_FILES = [
+  { file: "giorno1.json", page: "giorno1.html" },
+  { file: "giorno2.json", page: "giorno2.html" },
+];
+
+mountRestTimer();
 await ensureAuthReady();
 
 async function loadData() {
-  const [exercises, giorno1] = await Promise.all([
-    fetch(`${ROOT}/data/exercises.json`).then((r) => r.json()),
-    fetch(`${ROOT}/data/giorno1.json`).then((r) => r.json()),
-  ]);
-  return { exercises, giorno1 };
+  const exercises = await fetch(`${ROOT}/data/exercises.json`).then((r) => r.json());
+  const days = await Promise.all(
+    DAY_FILES.map(async ({ file, page }) => ({
+      page,
+      data: await fetch(`${ROOT}/data/${file}`).then((r) => r.json()),
+    }))
+  );
+  return { exercises, days };
 }
 
 const DEFAULT_VIDEO_START = 15;
@@ -65,13 +75,16 @@ function renderVideo(video, start = DEFAULT_VIDEO_START) {
   `;
 }
 
-function findDayContext(giorno1, slug) {
-  const index = giorno1.exercises.findIndex((e) => e.slug === slug);
-  if (index === -1) return null;
-  const current = giorno1.exercises[index];
-  const prev = giorno1.exercises[index - 1] || null;
-  const next = giorno1.exercises[index + 1] || null;
-  return { index, current, prev, next, giorno1 };
+function findDayContext(days, slug) {
+  for (const { page, data: giorno } of days) {
+    const index = giorno.exercises.findIndex((e) => e.slug === slug);
+    if (index === -1) continue;
+    const current = giorno.exercises[index];
+    const prev = giorno.exercises[index - 1] || null;
+    const next = giorno.exercises[index + 1] || null;
+    return { index, current, prev, next, giorno, dayPage: page };
+  }
+  return null;
 }
 
 function setupImageLightbox(src, alt) {
@@ -109,9 +122,9 @@ function setupImageLightbox(src, alt) {
 
 export async function renderExercisePage(slug) {
   const app = document.getElementById("app");
-  const { exercises, giorno1 } = await loadData();
+  const { exercises, days } = await loadData();
   const exercise = exercises[slug];
-  const context = findDayContext(giorno1, slug);
+  const context = findDayContext(days, slug);
 
   if (!exercise) {
     app.innerHTML = `<p>Esercizio non trovato.</p>`;
@@ -140,10 +153,10 @@ export async function renderExercisePage(slug) {
       </div>`;
 
   app.innerHTML = `
-    <a href="${ROOT}/giorno1.html" class="back-link">← Giorno 1</a>
+    <a href="${ROOT}/${context?.dayPage ?? "giorno1.html"}" class="back-link">← ${context?.giorno.title ?? "Giorno 1"}</a>
     <div id="auth-bar"></div>
 
-    ${context ? `<p class="day-context">${giorno1.title} · Esercizio ${context.index + 1} di ${giorno1.exercises.length}</p>` : ""}
+    ${context ? `<p class="day-context">${context.giorno.title} · Esercizio ${context.index + 1} di ${context.giorno.exercises.length}</p>` : ""}
 
     ${heroHtml}
 
@@ -217,7 +230,7 @@ export async function renderExercisePage(slug) {
 
   onAuthChange((user) => {
     if (authBar) authBar.innerHTML = renderAuthBar(user);
-    setupWorkoutLog(slug, user);
+    setupWorkoutLog(slug, user, exercise.name, ROOT);
   });
 }
 

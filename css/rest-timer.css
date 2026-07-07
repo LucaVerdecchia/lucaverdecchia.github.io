@@ -1,0 +1,103 @@
+.rest-timer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--card);
+  border-top: 1px solid #3a3a3c;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.rest-timer-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  transition: width 0.25s linear;
+}
+
+.rest-timer--done .rest-timer-bar {
+  background: #34c759;
+  width: 100% !important;
+}
+
+.rest-timer-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.rest-timer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.rest-timer-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.rest-timer--done .rest-timer-label {
+  color: #34c759;
+}
+
+.rest-timer-exercise {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rest-timer-time {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  min-width: 64px;
+  text-align: center;
+}
+
+.rest-timer--done .rest-timer-time {
+  color: #34c759;
+  font-size: 1.4rem;
+}
+
+.rest-timer-dismiss {
+  border: 1px solid #3a3a3c;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.rest-timer-dismiss:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+body.has-rest-timer .page,
+body.has-rest-timer .container {
+  padding-bottom: calc(40px + 80px);
+}

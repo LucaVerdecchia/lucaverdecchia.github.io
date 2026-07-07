@@ -1,5 +1,7 @@
 @import url("./theme.css");
 @import url("./auth.css");
+@import url("./rest-timer.css");
+@import url("./toast.css");
 
 body.home {
   min-height: 100dvh;

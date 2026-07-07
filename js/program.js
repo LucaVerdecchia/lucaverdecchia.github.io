@@ -1,4 +1,8 @@
+import { mountRestTimer } from "./rest-timer-ui.js";
+
 const ROOT = "..";
+
+mountRestTimer();
 
 async function loadDayStats(dayData) {
   const day = await fetch(`${ROOT}/data/${dayData}`).then((r) => r.json());

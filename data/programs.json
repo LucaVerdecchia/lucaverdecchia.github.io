@@ -23,7 +23,9 @@
         "slug": "giorno2",
         "title": "Giorno 2",
         "subtitle": "Lower body",
-        "available": false
+        "page": "giorno2.html",
+        "dayData": "giorno2.json",
+        "available": true
       },
       {
         "slug": "giorno3",

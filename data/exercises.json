@@ -80,5 +80,73 @@
     "equipment": "Cavi",
     "notes": "Gomiti stabili, contrai in cima al movimento.",
     "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "machine-hack-squat": {
+    "name": "Hack Squat alla Macchina",
+    "nameEn": "Machine Hack Squat",
+    "image": "images/machine_hack_squat.png",
+    "muscles": ["Quadricipiti", "Glutei"],
+    "equipment": "Macchina",
+    "notes": "Piedi alla larghezza delle spalle, scendi controllando fino a circa 90° di flessione del ginocchio."
+  },
+  "stiff-leg-deadlift-dumbbell": {
+    "name": "Stacco Gambe Tese con Manubri",
+    "nameEn": "Stiff Leg Deadlifts (Dumbbell)",
+    "image": "images/stiff_leg_deadlift.png",
+    "muscles": ["Femorali", "Glutei", "Lombari"],
+    "equipment": "Manubri",
+    "notes": "Gambe quasi tese, schiena neutra. Scendi fino a sentire lo stretch sui femorali."
+  },
+  "standing-calf-raise": {
+    "name": "Calf Raise in Piedi",
+    "nameEn": "Standing Calf Raise",
+    "image": "images/standing_calf_raise.png",
+    "muscles": ["Polpacci"],
+    "equipment": "Macchina",
+    "notes": "Estensione completa in alto, pausa di 1 secondo, discesa controllata."
+  },
+  "leg-extensions": {
+    "name": "Leg Extension",
+    "nameEn": "Leg Extensions",
+    "image": "images/leg_extensions.png",
+    "muscles": ["Quadricipiti"],
+    "equipment": "Macchina",
+    "notes": "Estendi completamente le ginocchia senza bloccare il movimento in alto.",
+    "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "leg-curl": {
+    "name": "Leg Curl",
+    "nameEn": "Leg Curl",
+    "image": "images/leg_curl.png",
+    "muscles": ["Femorali"],
+    "equipment": "Macchina",
+    "notes": "Contrai i femorali portando i talloni verso i glutei, movimento controllato.",
+    "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "seated-calf-raise": {
+    "name": "Calf Raise da Seduto",
+    "nameEn": "Seated Calf Raise",
+    "image": "images/seated_calf_raise.png",
+    "muscles": ["Polpacci (soleo)"],
+    "equipment": "Macchina",
+    "notes": "Ginocchia a 90°, spingi con la punta dei piedi fino all'estensione completa.",
+    "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "cable-crunch": {
+    "name": "Crunch ai Cavi",
+    "nameEn": "Cable Crunch",
+    "image": "images/cable_crunch.png",
+    "muscles": ["Addominali"],
+    "equipment": "Cavi",
+    "notes": "In ginocchio, avvolgi la schiena portando il petto verso il bacino.",
+    "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "cable-pull-through": {
+    "name": "Pull Through ai Cavi",
+    "nameEn": "Cable Pull Through w/Rope",
+    "image": "images/cable_pull_through.png",
+    "muscles": ["Glutei", "Femorali"],
+    "equipment": "Cavi",
+    "notes": "Schiena neutra, spingi i fianchi in avanti contraendo glutei in chiusura."
   }
 }

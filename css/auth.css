@@ -173,3 +173,108 @@
 .log-sets strong {
   color: var(--text);
 }
+
+.log-set {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.log-set-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.log-set-edit,
+.log-set-delete {
+  border: 1px solid #3a3a3c;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.log-set-edit:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.log-set-delete:hover {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.log-set-delete:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.log-set-form {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.log-set-form input {
+  width: 58px;
+  box-sizing: border-box;
+  background: var(--card);
+  border: 1px solid #3a3a3c;
+  border-radius: 8px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 7px 8px;
+}
+
+.log-set-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.log-set-sep {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.log-set-save,
+.log-set-cancel {
+  font-family: inherit;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 7px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.log-set-save {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  margin-left: auto;
+}
+
+.log-set-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.log-set-cancel {
+  border: 1px solid #3a3a3c;
+  background: transparent;
+  color: var(--text-muted);
+}
