@@ -1,0 +1,14 @@
+{
+  "title": "GIORNO 1",
+  "program": "FORZA & IPERTROFIA",
+  "exercises": [
+    { "slug": "bench-press", "sets": 3, "reps": "6-12" },
+    { "slug": "barbell-row", "sets": 3, "reps": "6-12" },
+    { "slug": "seated-overhead-dumbbell-press", "sets": 3, "reps": "8-12" },
+    { "slug": "pec-dec", "sets": 2, "reps": "10-12" },
+    { "slug": "v-bar-lat-pull-down", "sets": 2, "reps": "10-12" },
+    { "slug": "side-lateral-raise", "sets": 2, "reps": "10-15" },
+    { "slug": "cable-tricep-extensions", "sets": 3, "reps": "8-12" },
+    { "slug": "cable-curls", "sets": 3, "reps": "8-12" }
+  ]
+}

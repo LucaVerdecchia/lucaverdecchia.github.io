@@ -1,0 +1,84 @@
+{
+  "bench-press": {
+    "name": "Panca Piana",
+    "nameEn": "Bench Press",
+    "image": "images/bench-press.png",
+    "video": "tuwHzzPdaGc",
+    "muscles": ["Petto", "Tricipiti", "Spalle anteriori"],
+    "equipment": "Bilanciere",
+    "notes": "Mantieni le scapole retratte e i piedi ben piantati a terra."
+  },
+  "barbell-row": {
+    "name": "Rematore con Bilanciere",
+    "nameEn": "Seated Cable Row",
+    "image": "images/low-rows.png",
+    "video": "https://www.youtube.com/watch?v=NYok5zjbDcw",
+    "videoStart": 18,
+    "muscles": ["Dorsali", "Bicipiti", "Trapezio"],
+    "equipment": "Bilanciere",
+    "notes": "Schiena neutra, tira il bilanciere verso l'ombelico."
+  },
+  "seated-overhead-dumbbell-press": {
+    "name": "Lento con manubri da seduto",
+    "nameEn": "Seated Overhead Dumbbell Press",
+    "image": "images/overhead-press.png",
+    "video": "FRxZ6wr5bpA",
+    "muscles": ["Spalle", "Tricipiti"],
+    "equipment": "Manubri",
+    "notes": "Seduto con schienale, spingi i manubri sopra la testa senza inarcare eccessivamente la schiena."
+  },
+  "pec-dec": {
+    "name": "Pec Deck",
+    "nameEn": "Pec Dec",
+    "image": "images/pec-dec.png",
+    "video": "https://www.youtube.com/watch?v=eGjt4lk6g34",
+    "videoStart": 0,
+    "muscles": ["Petto"],
+    "equipment": "Macchina",
+    "notes": "Gomiti leggermente flessi durante tutto il movimento.",
+    "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "v-bar-lat-pull-down": {
+    "name": "Lat Machine Presa a V",
+    "nameEn": "V-Bar Lat Pull Down",
+    "image": "images/lat-pulldown.png",
+    "video": "https://www.youtube.com/watch?v=uAyrz5GTEHg",
+    "videoStart": 20,
+    "muscles": ["Dorsali", "Bicipiti"],
+    "equipment": "Cavi",
+    "notes": "Tira la V-bar verso il petto alto, schiena leggermente inclinata.",
+    "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "side-lateral-raise": {
+    "name": "Alzate Laterali",
+    "nameEn": "Side Lateral Raise",
+    "image": "images/lateral-raise.png",
+    "video": "https://www.youtube.com/watch?v=XPPfnSEATJA",
+    "videoStart": 0,
+    "muscles": ["Deltoide laterale"],
+    "equipment": "Manubri",
+    "notes": "Alza i manubri fino all'altezza delle spalle, senza slancio."
+  },
+  "cable-tricep-extensions": {
+    "name": "Estensioni Tricipiti ai Cavi",
+    "nameEn": "Cable Tricep Extensions",
+    "image": "images/tricep-extension.png",
+    "video": "https://www.youtube.com/watch?v=mpZ9VRisAyw",
+    "videoStart": 13,
+    "muscles": ["Tricipiti"],
+    "equipment": "Cavi",
+    "notes": "Gomiti fermi lungo i fianchi, estendi completamente.",
+    "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "cable-curls": {
+    "name": "Curl ai Cavi",
+    "nameEn": "Cable Curls",
+    "image": "images/cable-curl.png",
+    "video": "https://www.youtube.com/watch?v=s0QjT0daqAc",
+    "videoStart": 0,
+    "muscles": ["Bicipiti"],
+    "equipment": "Cavi",
+    "notes": "Gomiti stabili, contrai in cima al movimento.",
+    "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  }
+}

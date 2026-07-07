@@ -1,0 +1,42 @@
+{
+  "upper-lower-4-day": {
+    "name": "Upper/Lower 4 Day",
+    "subtitle": "Forza & Ipertrofia · 4 giorni a settimana",
+    "description": "L'Upper/Lower è una delle split più efficaci per sviluppare forza e massa muscolare. Il corpo viene diviso in Upper (parte superiore) e Lower (parte inferiore), allenando ogni gruppo muscolare 2 volte a settimana. Questo permette una frequenza ottimale, un buon recupero e una progressione costante, risultando ideale sia per chi ricomincia ad allenarsi sia per chi vuole costruire un fisico equilibrato.",
+    "tips": [
+      "Allenati con intensità, ma privilegia sempre la tecnica rispetto al peso.",
+      "Cerca di aumentare gradualmente carichi o ripetizioni nel tempo (progressive overload).",
+      "Se salti un allenamento, non recuperarlo facendo due sedute nello stesso giorno: riprendi semplicemente dal workout successivo e continua la programmazione.",
+      "Riposa 60-90 secondi tra le serie (2 minuti nei principali esercizi multiarticolari).",
+      "Dormi almeno 7-8 ore e mantieni un'alimentazione ricca di proteine per favorire il recupero."
+    ],
+    "days": [
+      {
+        "slug": "giorno1",
+        "title": "Giorno 1",
+        "subtitle": "Upper body",
+        "page": "giorno1.html",
+        "dayData": "giorno1.json",
+        "available": true
+      },
+      {
+        "slug": "giorno2",
+        "title": "Giorno 2",
+        "subtitle": "Lower body",
+        "available": false
+      },
+      {
+        "slug": "giorno3",
+        "title": "Giorno 3",
+        "subtitle": "Upper body",
+        "available": false
+      },
+      {
+        "slug": "giorno4",
+        "title": "Giorno 4",
+        "subtitle": "Lower body",
+        "available": false
+      }
+    ]
+  }
+}

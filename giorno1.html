@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Giorno 1 | Scheda Palestra</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/theme.css" />
+    <style>
+      .header-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .day-title {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--accent);
+        letter-spacing: 0.02em;
+        line-height: 1;
+      }
+
+      .program-label {
+        font-size: 0.65rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        text-align: right;
+        max-width: 120px;
+        line-height: 1.4;
+        padding-top: 4px;
+      }
+
+      .badges {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+
+      .badge {
+        background: var(--badge-bg);
+        color: var(--text-muted);
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 20px;
+        letter-spacing: 0.04em;
+      }
+
+      .badge strong {
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      .exercise-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .exercise-card {
+        display: block;
+        background: var(--card);
+        border-radius: 18px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+
+      .exercise-card:hover {
+        transform: translateY(-2px);
+        background: #242426;
+      }
+
+      .exercise-number {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        width: 32px;
+        height: 32px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+      }
+
+      .exercise-body {
+        padding: 16px 16px 18px;
+      }
+
+      .exercise-name {
+        margin: 0 0 4px;
+        font-size: 1.35rem;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+
+      .exercise-name-en {
+        margin: 0 0 14px;
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        letter-spacing: 0.02em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <a href="programmi/upper-lower-4-day.html" class="back-link">← Upper/Lower 4 Day</a>
+
+      <header>
+        <div class="header-top">
+          <h1 class="day-title">GIORNO 1</h1>
+          <span class="program-label">FORZA &amp; IPERTROFIA</span>
+        </div>
+        <div class="badges">
+          <span class="badge">ESERCIZI <strong id="total-exercises">8</strong></span>
+          <span class="badge">SERIE TOT. <strong id="total-sets">21</strong></span>
+        </div>
+      </header>
+
+      <main class="exercise-list" id="exercise-list"></main>
+    </div>
+
+    <script type="module">
+      import { renderGiorno1 } from "./js/giorno1.js";
+      renderGiorno1();
+    </script>
+  </body>
+</html>

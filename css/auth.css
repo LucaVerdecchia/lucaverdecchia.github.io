@@ -1,0 +1,168 @@
+.auth-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+.auth-bar--signed-in {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.auth-bar-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.auth-bar-label strong {
+  color: var(--text);
+}
+
+.auth-bar-btn {
+  border: 1px solid #3a3a3c;
+  background: transparent;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.auth-bar-btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.auth-bar-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.workout-log-section {
+  margin-bottom: 14px;
+}
+
+.log-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.log-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.log-field-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.log-field input {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--card-inner);
+  border: 1px solid #3a3a3c;
+  border-radius: 10px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 12px 14px;
+}
+
+.log-field input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.log-submit {
+  width: 100%;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.log-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.log-history-title {
+  margin-top: 20px;
+}
+
+.log-empty {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.log-history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.log-session {
+  background: var(--card-inner);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.log-date {
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.log-sets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.log-sets li {
+  font-size: 0.9rem;
+  color: #d1d1d6;
+}
+
+.log-sets strong {
+  color: var(--text);
+}
