@@ -9,6 +9,7 @@ const ROOT = "..";
 const DAY_FILES = [
   { file: "giorno1.json", page: "giorno1.html" },
   { file: "giorno2.json", page: "giorno2.html" },
+  { file: "giorno3.json", page: "giorno3.html" },
 ];
 
 mountRestTimer();
@@ -18,6 +19,7 @@ async function loadData() {
   const exercises = await fetch(`${ROOT}/data/exercises.json`).then((r) => r.json());
   const days = await Promise.all(
     DAY_FILES.map(async ({ file, page }) => ({
+      file,
       page,
       data: await fetch(`${ROOT}/data/${file}`).then((r) => r.json()),
     }))
@@ -75,16 +77,31 @@ function renderVideo(video, start = DEFAULT_VIDEO_START) {
   `;
 }
 
-function findDayContext(days, slug) {
-  for (const { page, data: giorno } of days) {
+function findDayContext(days, slug, preferredDaySlug) {
+  const orderedDays = preferredDaySlug
+    ? [...days].sort((a, b) => {
+        const aSlug = a.file.replace(".json", "");
+        const bSlug = b.file.replace(".json", "");
+        if (aSlug === preferredDaySlug) return -1;
+        if (bSlug === preferredDaySlug) return 1;
+        return 0;
+      })
+    : days;
+
+  for (const { file, page, data: giorno } of orderedDays) {
     const index = giorno.exercises.findIndex((e) => e.slug === slug);
     if (index === -1) continue;
     const current = giorno.exercises[index];
     const prev = giorno.exercises[index - 1] || null;
     const next = giorno.exercises[index + 1] || null;
-    return { index, current, prev, next, giorno, dayPage: page };
+    const daySlug = file.replace(".json", "");
+    return { index, current, prev, next, giorno, dayPage: page, daySlug };
   }
   return null;
+}
+
+function exerciseHref(slug, daySlug) {
+  return daySlug ? `${slug}.html?giorno=${daySlug}` : `${slug}.html`;
 }
 
 function setupImageLightbox(src, alt) {
@@ -124,7 +141,8 @@ export async function renderExercisePage(slug) {
   const app = document.getElementById("app");
   const { exercises, days } = await loadData();
   const exercise = exercises[slug];
-  const context = findDayContext(days, slug);
+  const preferredDay = new URLSearchParams(window.location.search).get("giorno");
+  const context = findDayContext(days, slug, preferredDay);
 
   if (!exercise) {
     app.innerHTML = `<p>Esercizio non trovato.</p>`;
@@ -214,8 +232,8 @@ export async function renderExercisePage(slug) {
     ${
       context
         ? `<nav class="nav-exercises">
-            <a href="${context.prev ? `${context.prev.slug}.html` : "#"}" class="nav-exercise-btn ${context.prev ? "" : "disabled"}">← Prec.</a>
-            <a href="${context.next ? `${context.next.slug}.html` : "#"}" class="nav-exercise-btn accent ${context.next ? "" : "disabled"}">Succ. →</a>
+            <a href="${context.prev ? exerciseHref(context.prev.slug, context.daySlug) : "#"}" class="nav-exercise-btn ${context.prev ? "" : "disabled"}">← Prec.</a>
+            <a href="${context.next ? exerciseHref(context.next.slug, context.daySlug) : "#"}" class="nav-exercise-btn accent ${context.next ? "" : "disabled"}">Succ. →</a>
           </nav>`
         : ""
     }

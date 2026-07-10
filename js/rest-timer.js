@@ -10,6 +10,7 @@ export const REST_DURATIONS = {
   "cable-tricep-extensions": 75,
   "cable-curls": 75,
   "machine-hack-squat": 120,
+  "back-extension-45": 90,
   "stiff-leg-deadlift-dumbbell": 120,
   "standing-calf-raise": 75,
   "leg-extensions": 75,
@@ -17,6 +18,12 @@ export const REST_DURATIONS = {
   "seated-calf-raise": 60,
   "cable-crunch": 60,
   "cable-pull-through": 75,
+  "incline-dumbbell-bench": 120,
+  "chest-supported-row": 120,
+  "machine-chest-press": 75,
+  "lat-pulldown": 90,
+  "reverse-pec-deck": 60,
+  "dumbbell-curls": 75,
 };
 
 export function getRestDuration(slug) {

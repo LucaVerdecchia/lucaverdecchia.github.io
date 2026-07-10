@@ -3,7 +3,7 @@
   "program": "FORZA & IPERTROFIA",
   "exercises": [
     { "slug": "machine-hack-squat", "sets": 3, "reps": "6-12" },
-    { "slug": "stiff-leg-deadlift-dumbbell", "sets": 3, "reps": "8-12" },
+    { "slug": "back-extension-45", "sets": 3, "reps": "10-12" },
     { "slug": "standing-calf-raise", "sets": 3, "reps": "10-15" },
     { "slug": "leg-extensions", "sets": 2, "reps": "10-12" },
     { "slug": "leg-curl", "sets": 2, "reps": "10-12" },

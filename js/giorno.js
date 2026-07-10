@@ -27,13 +27,15 @@ export async function renderGiorno(dayFile) {
 
     list.innerHTML = "";
 
+    const daySlug = dayFile.replace(".json", "");
+
     giorno.exercises.forEach((entry, index) => {
       const exercise = exercises[entry.slug];
       const name = exercise?.name ?? entry.slug;
       const nameEn = exercise?.nameEn ?? "";
 
       const card = document.createElement("a");
-      card.href = `esercizi/${entry.slug}.html`;
+      card.href = `esercizi/${entry.slug}.html?giorno=${daySlug}`;
       card.className = "exercise-card";
       card.innerHTML = `
         <div class="exercise-image">

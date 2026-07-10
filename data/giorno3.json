@@ -1,0 +1,14 @@
+{
+  "title": "GIORNO 3",
+  "program": "FORZA & IPERTROFIA",
+  "exercises": [
+    { "slug": "incline-dumbbell-bench", "sets": 3, "reps": "8-12" },
+    { "slug": "chest-supported-row", "sets": 3, "reps": "8-12" },
+    { "slug": "seated-overhead-dumbbell-press", "sets": 3, "reps": "8-12" },
+    { "slug": "machine-chest-press", "sets": 2, "reps": "8-12" },
+    { "slug": "lat-pulldown", "sets": 2, "reps": "8-12" },
+    { "slug": "reverse-pec-deck", "sets": 2, "reps": "12-15" },
+    { "slug": "dumbbell-curls", "sets": 3, "reps": "8-12" },
+    { "slug": "cable-tricep-extensions", "sets": 3, "reps": "8-12" }
+  ]
+}

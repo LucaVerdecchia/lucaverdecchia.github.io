@@ -41,13 +41,21 @@
   "v-bar-lat-pull-down": {
     "name": "Lat Machine Presa a V",
     "nameEn": "V-Bar Lat Pull Down",
-    "image": "images/lat-pulldown.png",
-    "video": "https://www.youtube.com/watch?v=uAyrz5GTEHg",
-    "videoStart": 20,
+    "image": "images/v_bar_lat_pull_down.png",
+    "video": "SZ1Yv4Q-aTI",
     "muscles": ["Dorsali", "Bicipiti"],
     "equipment": "Cavi",
     "notes": "Tira la V-bar verso il petto alto, schiena leggermente inclinata.",
     "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "lat-pulldown": {
+    "name": "Lat Pulldown",
+    "nameEn": "Lat Pulldown",
+    "image": "images/lat_pulldown.png",
+    "video": "JGeRYIZdojU",
+    "muscles": ["Dorsali", "Bicipiti"],
+    "equipment": "Cavi",
+    "notes": "Tira la barra verso il petto alto, petto in fuori, schiena leggermente inclinata."
   },
   "side-lateral-raise": {
     "name": "Alzate Laterali",
@@ -85,9 +93,19 @@
     "name": "Hack Squat alla Macchina",
     "nameEn": "Machine Hack Squat",
     "image": "images/machine_hack_squat.png",
+    "video": "u_1a0nWG7vQ",
     "muscles": ["Quadricipiti", "Glutei"],
     "equipment": "Macchina",
     "notes": "Piedi alla larghezza delle spalle, scendi controllando fino a circa 90° di flessione del ginocchio."
+  },
+  "back-extension-45": {
+    "name": "Back Extension 45°",
+    "nameEn": "45° Back Extension",
+    "image": "images/back_extension.png",
+    "video": "ph3pddpKzzw",
+    "muscles": ["Lombari", "Glutei", "Femorali"],
+    "equipment": "Macchina",
+    "notes": "Bacino appoggiato al cuscino, movimento controllato. Estendi la schiena senza iperestendere in chiusura."
   },
   "stiff-leg-deadlift-dumbbell": {
     "name": "Stacco Gambe Tese con Manubri",
@@ -101,6 +119,7 @@
     "name": "Calf Raise in Piedi",
     "nameEn": "Standing Calf Raise",
     "image": "images/standing_calf_raise.png",
+    "video": "k67UjgvJdEk",
     "muscles": ["Polpacci"],
     "equipment": "Macchina",
     "notes": "Estensione completa in alto, pausa di 1 secondo, discesa controllata."
@@ -109,24 +128,28 @@
     "name": "Leg Extension",
     "nameEn": "Leg Extensions",
     "image": "images/leg_extensions.png",
+    "video": "4ZDm5EbiFI8",
     "muscles": ["Quadricipiti"],
     "equipment": "Macchina",
-    "notes": "Estendi completamente le ginocchia senza bloccare il movimento in alto.",
+    "notes": "Estendi completamente le ginocchia senza bloccare il movimento in alto. La punta dei piedi deve puntare verso l'alto.",
     "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
   },
   "leg-curl": {
     "name": "Leg Curl",
     "nameEn": "Leg Curl",
     "image": "images/leg_curl.png",
+    "video": "t9sTSr-JYSs",
+    "videoStart": 50,
     "muscles": ["Femorali"],
     "equipment": "Macchina",
-    "notes": "Contrai i femorali portando i talloni verso i glutei, movimento controllato.",
+    "notes": "Contrai i femorali portando i talloni verso i glutei, movimento controllato. La punta dei piedi deve puntare verso l'alto.",
     "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
   },
   "seated-calf-raise": {
     "name": "Calf Raise da Seduto",
     "nameEn": "Seated Calf Raise",
     "image": "images/seated_calf_raise.png",
+    "video": "ORY-ke6vcgk",
     "muscles": ["Polpacci (soleo)"],
     "equipment": "Macchina",
     "notes": "Ginocchia a 90°, spingi con la punta dei piedi fino all'estensione completa.",
@@ -136,6 +159,7 @@
     "name": "Crunch ai Cavi",
     "nameEn": "Cable Crunch",
     "image": "images/cable_crunch.png",
+    "video": "ToJeyhydUxU",
     "muscles": ["Addominali"],
     "equipment": "Cavi",
     "notes": "In ginocchio, avvolgi la schiena portando il petto verso il bacino.",
@@ -145,8 +169,58 @@
     "name": "Pull Through ai Cavi",
     "nameEn": "Cable Pull Through w/Rope",
     "image": "images/cable_pull_through.png",
+    "video": "4oZ_0_bQcOg",
+    "videoStart": 23,
     "muscles": ["Glutei", "Femorali"],
     "equipment": "Cavi",
     "notes": "Schiena neutra, spingi i fianchi in avanti contraendo glutei in chiusura."
+  },
+  "incline-dumbbell-bench": {
+    "name": "Panca Inclinata con Manubri",
+    "nameEn": "Incline Dumbbell Bench",
+    "image": "images/Incline-Dumbbell-Bench.png",
+    "video": "8nNi8jbbUPE",
+    "videoStart": 8,
+    "muscles": ["Petto alto", "Tricipiti", "Spalle anteriori"],
+    "equipment": "Manubri",
+    "notes": "Panca inclinata a 30–45°, scapole retratte. Abbassa i manubri controllando fino al petto alto."
+  },
+  "chest-supported-row": {
+    "name": "Rematore con Petto Appoggiato",
+    "nameEn": "Chest Supported Row",
+    "image": "images/chest_supported_row.png",
+    "video": "9zkP4Cd_cz0",
+    "muscles": ["Dorsali", "Bicipiti", "Trapezio"],
+    "equipment": "Macchina",
+    "notes": "Petto ben appoggiato al cuscino, tira i gomiti indietro contraendo i dorsali. Schema tipico: 3 serie × 8-12 ripetizioni."
+  },
+  "machine-chest-press": {
+    "name": "Chest Press alla Macchina",
+    "nameEn": "Machine Chest Press",
+    "image": "images/machine_chest_press.png",
+    "video": "vnd-GBtTMLI",
+    "muscles": ["Petto", "Tricipiti", "Spalle anteriori"],
+    "equipment": "Macchina",
+    "notes": "Schiena appoggiata, spingi le maniglie in avanti contraendo il petto. Schema tipico: 2 serie × 8-12 ripetizioni.",
+    "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "reverse-pec-deck": {
+    "name": "Reverse Pec Deck",
+    "nameEn": "Reverse Pec Deck",
+    "image": "images/reverse_pec_deck.png",
+    "video": "Y59M5fXn8bs",
+    "muscles": ["Deltoide posteriore", "Trapezio"],
+    "equipment": "Macchina",
+    "notes": "Petto ben appoggiato al cuscino. Gomiti leggermente piegati e fissi. Apri le braccia fino a portarle in linea con le spalle. Fermati 1 secondo in massima contrazione. Torna lentamente in 2-3 secondi. Evita di usare slancio con il busto."
+  },
+  "dumbbell-curls": {
+    "name": "Curl con Manubri",
+    "nameEn": "Dumbbell Curls",
+    "image": "images/dumbell_curls.png",
+    "video": "6DeLZ6cbgWQ",
+    "muscles": ["Bicipiti"],
+    "equipment": "Manubri",
+    "notes": "Gomiti fermi lungo i fianchi, contrai in cima al movimento.",
+    "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
   }
 }
