@@ -24,6 +24,12 @@ export const REST_DURATIONS = {
   "lat-pulldown": 90,
   "reverse-pec-deck": 60,
   "dumbbell-curls": 75,
+  "leg-press": 120,
+  "hip-thrust-machine": 120,
+  "leg-press-calf-raise": 75,
+  "adductor-machine": 75,
+  "abductor-machine": 75,
+  "plank": 60,
 };
 
 export function getRestDuration(slug) {

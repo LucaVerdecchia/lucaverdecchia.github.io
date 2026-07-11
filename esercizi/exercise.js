@@ -10,6 +10,7 @@ const DAY_FILES = [
   { file: "giorno1.json", page: "giorno1.html" },
   { file: "giorno2.json", page: "giorno2.html" },
   { file: "giorno3.json", page: "giorno3.html" },
+  { file: "giorno4.json", page: "giorno4.html" },
 ];
 
 mountRestTimer();

@@ -39,7 +39,9 @@
         "slug": "giorno4",
         "title": "Giorno 4",
         "subtitle": "Lower body",
-        "available": false
+        "page": "giorno4.html",
+        "dayData": "giorno4.json",
+        "available": true
       }
     ]
   }

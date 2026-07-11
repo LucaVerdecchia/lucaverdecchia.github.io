@@ -222,5 +222,58 @@
     "equipment": "Manubri",
     "notes": "Gomiti fermi lungo i fianchi, contrai in cima al movimento.",
     "importantNote": "3 sec negative: esegui la fase di ritorno (eccentrica) lentamente, impiegando circa 3 secondi. Non lasciare che il peso ritorni da solo: mantieni sempre il controllo del movimento."
+  },
+  "leg-press": {
+    "name": "Leg Press",
+    "nameEn": "Leg Press",
+    "image": "images/leg_press.png",
+    "video": "q4W4_VJbKW0",
+    "muscles": ["Quadricipiti", "Glutei"],
+    "equipment": "Macchina",
+    "notes": "Posizione dei piedi — per ora usa una posizione neutra: piedi circa larghezza spalle; metà pedana; punte leggermente verso l'esterno; ginocchia nella stessa direzione delle punte. Schema tipico: 3 serie × 10-20 ripetizioni."
+  },
+  "hip-thrust-machine": {
+    "name": "Hip Thrust alla Macchina",
+    "nameEn": "Hip Thrust Machine",
+    "image": "images/Hip_Thrust_Machine.png",
+    "video": "xtIZ9pjcA_8",
+    "muscles": ["Glutei", "Femorali"],
+    "equipment": "Macchina",
+    "notes": "In alto contrai bene i glutei per circa 1 secondo, senza iperestendere la zona lombare. Schema tipico: 3 serie × 8-12 ripetizioni. Se la macchina non è disponibile, sostituisci con Pull Through ai Cavi (Giorno 2)."
+  },
+  "leg-press-calf-raise": {
+    "name": "Calf Raise alla Leg Press",
+    "nameEn": "Leg Press Calf Raise",
+    "image": "images/leg_press_calf_raise.png",
+    "video": "shquCR3VVp4",
+    "muscles": ["Polpacci"],
+    "equipment": "Macchina",
+    "notes": "Solo avampiede sulla pedana. Ginocchia quasi distese, ma non in iperestensione. Scendi lentamente fino a sentire l'allungamento. Spingi sulla punta del piede. 1 secondo di contrazione in alto. Niente rimbalzi in basso. Schema tipico: 3 serie × 10-15 ripetizioni."
+  },
+  "adductor-machine": {
+    "name": "Adduttori alla Macchina",
+    "nameEn": "Adductor Machine",
+    "image": "images/adductor_machine.png",
+    "video": "e9AqTFMmP18",
+    "muscles": ["Adduttori"],
+    "equipment": "Macchina",
+    "notes": "Parti con un'apertura che crea tensione leggera, non dolore. Chiudi le gambe in modo controllato. Contrai per circa 1 secondo. Riapri lentamente in 2-3 secondi. Non cercare subito il massimo ROM della macchina. Schema tipico: 2 serie × 12-15 ripetizioni."
+  },
+  "abductor-machine": {
+    "name": "Abduttori alla Macchina",
+    "nameEn": "Abductor Machine",
+    "image": "images/abductor_machine.png",
+    "video": "H98IP8rARy4",
+    "muscles": ["Abduttori", "Gluteo medio"],
+    "equipment": "Macchina",
+    "notes": "Schema tipico: 2 serie × 12-15 ripetizioni."
+  },
+  "plank": {
+    "name": "Plank",
+    "nameEn": "Plank",
+    "image": "images/plank.png",
+    "muscles": ["Addominali", "Core", "Lombari"],
+    "equipment": "Corpo libero",
+    "notes": "Gomiti sotto le spalle, corpo in linea retta da testa ai talloni. Contrai addominali e glutei, non lasciare cadere i fianchi. Schema tipico: 3 serie × 45-60 secondi."
   }
 }
